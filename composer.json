@@ -1,0 +1,39 @@
+{
+    "name": "trinityrank/urldesk",
+    "description": "Redirect Links",
+    "keywords": [
+        "laravel",
+        "nova",
+        "trinityrank"
+    ],
+    "homepage": "https://github.com/trinity-rank/urldesk",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "TrinityRank DevTeam",
+            "email": "trinitydevbg@gmail.com",
+            "role": "Team"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0|^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Trinityrank\\Urldesk\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Trinityrank\\Urldesk\\ToolServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
