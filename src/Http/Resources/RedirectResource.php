@@ -1,6 +1,6 @@
 <?php
 
-namespace Ivanradojevic\Urldesk\Http\Resources;
+namespace Trinityrank\Urldesk\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 

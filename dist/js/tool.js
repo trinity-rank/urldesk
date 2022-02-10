@@ -176,8 +176,7 @@ module.exports = function normalizeComponent (
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(2);
-module.exports = __webpack_require__(18);
+module.exports = __webpack_require__(2);
 
 
 /***/ }),
@@ -263,10 +262,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_EditRedirect___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__components_EditRedirect__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_DeleteRedirect__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_DeleteRedirect___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_DeleteRedirect__);
-//
-//
-//
-//
 //
 //
 //
@@ -876,6 +871,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         createLinks: function createLinks() {
             var _this = this;
 
+            if (this.redirect_from.endsWith("out")) {
+                this.redirect_from = this.redirect_from + '/';
+            }
             axios.post('/nova-vendor/urldesk/redirects', {
                 redirect_from: this.redirect_from,
                 redirect_to: this.redirect_to,
@@ -2196,33 +2194,29 @@ var render = function() {
                             "w-3/12 px-6 py-3 whitespace-nowrap text-sm text-blue-500"
                         },
                         [
-                          _c("div", { staticClass: "text-sm " }, [
-                            _c(
-                              "a",
-                              {
-                                staticClass: "hover:underline italic",
-                                attrs: {
-                                  href: redirect.redirect_to,
-                                  target: "_blank"
-                                }
-                              },
-                              [
-                                _c("div", [
-                                  _vm._v(
-                                    "\n                                " +
-                                      _vm._s(
-                                        _vm._f("truncate")(
-                                          redirect.redirect_to,
-                                          64,
-                                          "..."
-                                        )
-                                      ) +
-                                      "\n                            "
-                                  )
-                                ])
-                              ]
-                            )
-                          ])
+                          _c(
+                            "a",
+                            {
+                              staticClass: "hover:underline italic",
+                              attrs: {
+                                href: redirect.redirect_to,
+                                target: "_blank"
+                              }
+                            },
+                            [
+                              _vm._v(
+                                "\n                                " +
+                                  _vm._s(
+                                    _vm._f("truncate")(
+                                      redirect.redirect_to,
+                                      64,
+                                      "..."
+                                    )
+                                  ) +
+                                  "\n                        "
+                              )
+                            ]
+                          )
                         ]
                       ),
                       _vm._v(" "),
@@ -2402,12 +2396,6 @@ if (false) {
     require("vue-hot-reload-api")      .rerender("data-v-68ff5483", module.exports)
   }
 }
-
-/***/ }),
-/* 18 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

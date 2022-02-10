@@ -1,9 +1,9 @@
 <?php
 
-namespace Ivanradojevic\Urldesk\Http\Requests;
+namespace Trinityrank\Urldesk\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Ivanradojevic\Urldesk\Models\Redirect;
+use Trinityrank\Urldesk\Models\Redirect;
 use Illuminate\Validation\Rule;
 
 class UpdateRedirectRequest extends FormRequest

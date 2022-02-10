@@ -1,6 +1,6 @@
 <?php
 
-namespace Ivanradojevic\Urldesk\Http\Requests;
+namespace Trinityrank\Urldesk\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 

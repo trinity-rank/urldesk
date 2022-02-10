@@ -1,9 +1,9 @@
 <?php
 
-use Ivanradojevic\Urldesk\Http\Resources\RedirectResource;
-use Ivanradojevic\Urldesk\Http\Requests\SaveRedirectRequest;
-use Ivanradojevic\Urldesk\Http\Requests\UpdateRedirectRequest;
-use Ivanradojevic\Urldesk\Models\Redirect;
+use Trinityrank\Urldesk\Http\Resources\RedirectResource;
+use Trinityrank\Urldesk\Http\Requests\SaveRedirectRequest;
+use Trinityrank\Urldesk\Http\Requests\UpdateRedirectRequest;
+use Trinityrank\Urldesk\Models\Redirect;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Ivanradojevic\Urldesk\Models;
+namespace Trinityrank\Urldesk\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;

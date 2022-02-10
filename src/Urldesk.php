@@ -1,6 +1,6 @@
 <?php
 
-namespace Ivanradojevic\Urldesk;
+namespace Trinityrank\Urldesk;
 
 use Laravel\Nova\Nova;
 use Laravel\Nova\Tool;

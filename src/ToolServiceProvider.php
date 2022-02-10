@@ -1,12 +1,12 @@
 <?php
 
-namespace Ivanradojevic\Urldesk;
+namespace Trinityrank\Urldesk;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Nova\Events\ServingNova;
 use Laravel\Nova\Nova;
-use Ivanradojevic\Urldesk\Http\Middleware\Authorize;
+use Trinityrank\Urldesk\Http\Middleware\Authorize;
 
 class ToolServiceProvider extends ServiceProvider
 {

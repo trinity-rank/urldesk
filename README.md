@@ -8,7 +8,7 @@ composer require ivanradojevic/urldesk
 php artisan migrate
 
 //NovaServiceProvider
-use Ivanradojevic\Urldesk\Urldesk;
+use Trinityrank\Urldesk\Urldesk;
 
 public function tools()
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Ivanradojevic\Urldesk\Http\Middleware;
+namespace Trinityrank\Urldesk\Http\Middleware;
 
 use Laravel\Nova\Nova;
-use Ivanradojevic\Urldesk\Urldesk;
+use Trinityrank\Urldesk\Urldesk;
 
 class Authorize
 {
