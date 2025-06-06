@@ -1,5 +1,7 @@
+import '../css/tool.css';
+
 Nova.booting((Vue, router, store) => {
-	
+
   router.addRoutes([
     {
       name: 'urldesk',
@@ -18,6 +20,3 @@ Nova.booting((Vue, router, store) => {
   Vue.filter('truncate', filter);
 
 })
-
-
-

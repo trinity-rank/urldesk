@@ -14,13 +14,6 @@ public function tools()
 {
 	return [
 		new Urldesk,
-	];	
+	];
 }
-
-//Insert all Tailwind.css classes
-composer require optimistdigital/nova-tailwind
 ```
-
-
-
-
