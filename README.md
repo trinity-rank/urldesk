@@ -1,6 +1,6 @@
 ## Installation
 ```
-composer require ivanradojevic/urldesk
+composer require trinityrank/urldesk
 ```
 ## Usage
 
