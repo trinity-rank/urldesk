@@ -9,6 +9,7 @@ Nova.booting((Vue, router, store) => {
       component: require('./components/Tool'),
     },
   ])
+  Vue.component('urldesk', require('./components/Tool.vue').default);
 
   var filter = function(text, length, clamp){
       clamp = clamp || '...';
