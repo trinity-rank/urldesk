@@ -10,7 +10,7 @@
                     <a href="#" @click.prevent="switched(1)">1</a>
                 </span>
             </template>
-            <span v-for="page in pages" :class="{ 'text-blue-500' : meta.current_page === page}">
+            <span v-for="(page, pindex) in pages" :key="pindex" :class="{ 'text-blue-500' : meta.current_page === page}">
                 <a href="#" @click.prevent="switched(page)" >{{page}}</a>
             </span>
             <template v-if="section < sections">
@@ -20,7 +20,7 @@
             </template>
             <span :class="{ 'text-gray-400' : meta.current_page === meta.current_page}">
                 <a href="#" @click.prevent="switched(meta.current_page + 1)" >&gt;</a>
-            </span>   
+            </span>
         </div>
 
 
@@ -42,7 +42,7 @@
             section () {
                 return Math.ceil(this.meta.current_page / this.numbersPerSection)
             },
-    
+
             sections () {
                 return Math.ceil(this.meta.last_page / this.numbersPerSection)
             },
@@ -58,7 +58,7 @@
             },
 
             pages () {
-                return _.range((this.section - 1) * this.numbersPerSection + 1, 
+                return _.range((this.section - 1) * this.numbersPerSection + 1,
                     this.lastPage + 1
                 )
             },
@@ -66,7 +66,7 @@
         },
 
         methods: {
-  	
+
             switched(page) {
                 if (page <= 0 || page > this.meta.last_page) {
                     return
@@ -77,9 +77,8 @@
         },
 
         mounted() {
-  	
+
         }
 
-    };                           
+    };
 </script>
-

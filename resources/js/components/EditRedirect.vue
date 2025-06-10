@@ -41,11 +41,11 @@
                             <!-- flex-->
                             <div class="w-full ">
 
-                                
-                                <!-- right form -->                        
+
+                                <!-- right form -->
                                 <div class="w-full">
                                     <div class="flex flex-wrap">
-                                        
+
                                         <div class="w-full mb-6">
                                             <label class="block text-sm mb-2 text-gray-800 ">
                                               <span>Redirect From</span>
@@ -62,18 +62,18 @@
 
                                         <div class="w-full mb-6">
                                             <label class="block text-sm mb-2 text-gray-800 ">Status Code</label>
-                                            <select v-model="status_code" class="form-select w-full text-base border-2 border-blue-300 rounded px-3 py-2 focus:outline-none focus:ring-blue-500 focus:border-blue-500 ">                                                    
+                                            <select v-model="status_code" class="form-select w-full text-base border-2 border-blue-300 rounded px-3 py-2 focus:outline-none focus:ring-blue-500 focus:border-blue-500 ">
                                                     <option value="301">301</option>
                                                     <option value="302">302</option>
                                                     <option value="307">307</option>
-                                            </select>              
+                                            </select>
                                         </div>
-                                        
+
                                     </div>
                                 </div>
-                           
+
                             </div>
-                           
+
                         </div> <!-- end of the card -->
                     </form>
 
@@ -112,9 +112,9 @@
                 isOpen: false,
                 //id: "",
                 redirect_from: "",
-                redirect_to: "",        
+                redirect_to: "",
                 status_code: "",
-                errorMessage: "", 
+                errorMessage: "",
             }
         },
 
@@ -125,8 +125,8 @@
                 .then( (response) => {
                     this.redirect_from = response.data.data.redirect_from
                     this.redirect_to = response.data.data.redirect_to
-                    this.status_code = response.data.data.status_code  
-                    this.isOpen = true      
+                    this.status_code = response.data.data.status_code
+                    this.isOpen = true
                 });
             },
             editRedirect () {
@@ -138,16 +138,16 @@
                 })
                 .then((response) => {
                     this.$emit("editRedirectEvent")
-                    this.isOpen = false  
+                    this.isOpen = false
                     this.errorMessage = ""
-                })           
+                })
                 .catch(error => {
                     const key = Object.keys(error.response.data.errors)[0]
                     this.errorMessage = error.response.data.errors[key][0]
-                });   
+                });
             },
         },
 
-    };                           
+    };
 
 </script>

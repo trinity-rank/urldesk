@@ -40,18 +40,18 @@
                             <!-- flex-->
                             <div class="w-full ">
 
-                                
-                                <!-- right form -->                        
+
+                                <!-- right form -->
                                 <div class="w-full">
                                     <div class="flex flex-wrap">
-                                        
+
                                         <p>Are you sure?</p>
-                                        
+
                                     </div>
                                 </div>
-                           
+
                             </div>
-                           
+
                         </div> <!-- end of the card -->
                     </form>
 
@@ -97,14 +97,14 @@
                 .delete('/nova-vendor/urldesk/redirects/' + this.id)
                 .then((response) => {
                     this.$emit("deleteRedirectEvent")
-                    this.isOpen = false  
-                })           
+                    this.isOpen = false
+                })
                 .catch(error => {
                     //
-                });   
+                });
             },
         },
 
-    };                           
+    };
 
 </script>

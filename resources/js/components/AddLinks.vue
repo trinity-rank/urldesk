@@ -2,7 +2,7 @@
     <div>
         <button @click="isOpen = true" class="w-32 h-8 bg-blue-400 hover:bg-blue-500 tracking-wide rounded shadow py-1 px-3 text-white font-bold">
            Add Links
-        </button>    
+        </button>
 
         <!-- Modal -->
         <div v-show="isOpen" class="fixed z-10 inset-0 overflow-y-auto">
@@ -34,46 +34,46 @@
                 <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
 
                     <form>
-                        
+
                         <!-- card -->
                         <div class=" px-6 pt-8 pb-4 ">
                             <div v-if="errorMessage" class="text-red-500 text-center text-sm mb-4">{{errorMessage}}</div>
                             <!-- flex-->
                             <div class="w-full ">
 
-                                
-                                <!-- right form -->                        
+
+                                <!-- right form -->
                                 <div class="w-full">
                                     <div class="flex flex-wrap">
-                                        
+
                                         <div class="w-full mb-6">
                                             <label class="block text-sm mb-2 text-gray-800 ">
                                               <span>Redirect From</span>
-                                              <textarea v-model="redirect_from" class="rounded border-2 border-blue-300  form-textarea mt-1 block w-full focus:outline-none focus:ring-blue-500 focus:border-blue-500" rows="3"></textarea>
+                                              <textarea v-model="redirect_from" id="redirect_from" name="redirect_from" class="rounded border-2 border-blue-300  form-textarea mt-1 block w-full focus:outline-none focus:ring-blue-500 focus:border-blue-500" rows="3"></textarea>
                                             </label>
                                         </div>
 
                                         <div class="w-full mb-6">
                                             <label class="block text-sm mb-2 text-gray-800 ">
                                               <span>Redirect To</span>
-                                              <textarea v-model="redirect_to" class="rounded text-gray-800 border-2 border-blue-300  form-textarea mt-1 block w-full focus:outline-none focus:ring-blue-500 focus:border-blue-500" rows="5"></textarea>
+                                              <textarea v-model="redirect_to" id="redirect_to" name="redirect_to" class="rounded text-gray-800 border-2 border-blue-300  form-textarea mt-1 block w-full focus:outline-none focus:ring-blue-500 focus:border-blue-500" rows="5"></textarea>
                                             </label>
                                         </div>
 
                                         <div class="w-full mb-6">
                                             <label class="block text-sm mb-2 text-gray-800 ">Status Code</label>
-                                            <select v-model="status_code" class="form-select w-full text-base border-2 border-blue-300 rounded px-3 py-2 focus:outline-none focus:ring-blue-500 focus:border-blue-500 ">                                                    
+                                            <select v-model="status_code" id="status_code" name="status_code" class="form-select w-full text-base border-2 border-blue-300 rounded px-3 py-2 focus:outline-none focus:ring-blue-500 focus:border-blue-500 ">
                                                     <option value="301">301</option>
                                                     <option value="302">302</option>
                                                     <option value="307">307</option>
-                                            </select>              
+                                            </select>
                                         </div>
-                                        
+
                                     </div>
                                 </div>
-                           
+
                             </div>
-                           
+
                         </div> <!-- end of the card -->
                     </form>
 
@@ -100,14 +100,14 @@
 
     export default {
 
-        
+
         data() {
             return {
                 isOpen: false,
                 redirect_from: "",
                 redirect_to: "",
                 status_code: "307",
-                errorMessage: "", 
+                errorMessage: "",
             }
         },
 
@@ -121,20 +121,20 @@
                 })
                 .then((response) => {
                     this.$emit("createLinksEvent")
-                    this.isOpen = false      
+                    this.isOpen = false
 
                     this.redirect_from = ""
                     this.redirect_to = ""
                     this.status_code = "307"
-                    this.errorMessage = ""         
-                })           
+                    this.errorMessage = ""
+                })
                 .catch(error => {
                     const key = Object.keys(error.response.data.errors)[0]
                     this.errorMessage = error.response.data.errors[key][0]
-                });                
-            }, 
+                });
+            },
         },
 
-    };                           
+    };
 
 </script>
