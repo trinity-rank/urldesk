@@ -1,7 +1,6 @@
-let mix = require('laravel-mix');
+let mix = require('laravel-mix')
 
 mix.setPublicPath('dist')
-   .js('resources/js/tool.js', 'js').vue()
-   .postCss('resources/css/tool.css', 'css', [
-       require('@tailwindcss/postcss'),
-   ]);
+    .js('resources/js/tool.js', 'js')
+    .vue()
+    .postCss('resources/css/tool.css', 'css')
